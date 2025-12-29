@@ -275,6 +275,11 @@
                         <code class="command-code">cd build && rm -rf * && cmake .. && make -j$(nproc)</code>
                         <div class="command-desc">Limpa e recompila do zero</div>
                     </div>
+                    <div class="command-card">
+                        <div class="command-title">Processo completo de compilação e execução</div>
+                        <code class="command-code">cd src<br>mkdir build && cd build<br>cmake ..<br>make<br>mv -f tfs /server<br>cd /server<br>./tfs</code>
+                        <div class="command-desc">Passo a passo completo: criar build, compilar, mover executável e executar o servidor</div>
+                    </div>
                 </div>
             </div>
         </main>
