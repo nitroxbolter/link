@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Verifica hash na URL ao carregar a página
     function checkHash() {
         const hash = window.location.hash.substring(1);
-        if (hash && ['home', 'bases', 'sprites', 'github'].includes(hash)) {
+        if (hash && ['home', 'bases', 'sprites', 'github', 'tools'].includes(hash)) {
             showPage(hash);
         } else {
             showPage('home');
