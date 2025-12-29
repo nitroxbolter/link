@@ -34,6 +34,10 @@
                     <span class="nav-icon">🔧</span>
                     <span class="nav-text">Tools</span>
                 </a>
+                <a href="#comandos" class="nav-item" data-page="comandos">
+                    <span class="nav-icon">💻</span>
+                    <span class="nav-text">Comandos Linux</span>
+                </a>
             </nav>
         </aside>
 
@@ -89,6 +93,11 @@
                         <h3>Base Google Drive</h3>
                         <p>Base compartilhada no Google Drive</p>
                         <a href="https://drive.google.com/file/d/1sH4enflmU3h0PiJAILGMeQXEODc9q7PE/view?usp=sharing" target="_blank" class="link-button">Acessar</a>
+                    </div>
+                    <div class="link-card">
+                        <h3>Exodus 3.7</h3>
+                        <p>Base Exodus 3.7 no Google Drive</p>
+                        <a href="https://drive.google.com/file/d/1sH4enflmU3h0PiJAILGMeQXEODc9q7PE/view?usp=drive_link" target="_blank" class="link-button">Acessar</a>
                     </div>
                 </div>
             </div>
@@ -163,6 +172,108 @@
                         <h3>HoneyEditor - MassiveFlagsEditor</h3>
                         <p>Editor base com MassiveFlagsEditor para edição de itens e flags</p>
                         <a href="https://www.mediafire.com/file/hvpun4efxld66tt/HoneyEditor_base_MassiveFlagsEditor.zip/file" target="_blank" class="link-button">Acessar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Página Comandos Linux -->
+            <div id="comandos" class="page">
+                <h2>Comandos Linux</h2>
+                <p>Comandos úteis para gerenciamento de servidor e compilação:</p>
+                
+                <div class="command-section">
+                    <h3>Permissões de Pasta</h3>
+                    <div class="command-card">
+                        <div class="command-title">Dar permissão de leitura, escrita e execução</div>
+                        <code class="command-code">chmod 755 nome_da_pasta</code>
+                        <div class="command-desc">Permissão completa para o dono, leitura e execução para grupo e outros</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-title">Dar permissão total (777)</div>
+                        <code class="command-code">chmod 777 nome_da_pasta</code>
+                        <div class="command-desc">Permissão total para todos (cuidado com segurança)</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-title">Dar permissão recursiva</div>
+                        <code class="command-code">chmod -R 755 nome_da_pasta</code>
+                        <div class="command-desc">Aplica permissão recursivamente em todas as subpastas e arquivos</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-title">Mudar dono da pasta</div>
+                        <code class="command-code">chown -R usuario:grupo nome_da_pasta</code>
+                        <div class="command-desc">Muda o dono e grupo recursivamente</div>
+                    </div>
+                </div>
+
+                <div class="command-section">
+                    <h3>Compactar e Descompactar</h3>
+                    <div class="command-card">
+                        <div class="command-title">Compactar em ZIP</div>
+                        <code class="command-code">zip -r arquivo.zip pasta/</code>
+                        <div class="command-desc">Cria um arquivo ZIP recursivamente</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-title">Descompactar ZIP</div>
+                        <code class="command-code">unzip arquivo.zip</code>
+                        <div class="command-desc">Extrai arquivo ZIP no diretório atual</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-title">Compactar em TAR.GZ</div>
+                        <code class="command-code">tar -czf arquivo.tar.gz pasta/</code>
+                        <div class="command-desc">Cria arquivo tar.gz comprimido</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-title">Descompactar TAR.GZ</div>
+                        <code class="command-code">tar -xzf arquivo.tar.gz</code>
+                        <div class="command-desc">Extrai arquivo tar.gz</div>
+                    </div>
+                </div>
+
+                <div class="command-section">
+                    <h3>Instalar WinRAR / RAR</h3>
+                    <div class="command-card">
+                        <div class="command-title">Ubuntu/Debian</div>
+                        <code class="command-code">sudo apt-get update && sudo apt-get install rar unrar</code>
+                        <div class="command-desc">Instala RAR e UnRAR no Ubuntu/Debian</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-title">CentOS/RHEL</div>
+                        <code class="command-code">sudo yum install rar unrar</code>
+                        <div class="command-desc">Instala RAR e UnRAR no CentOS/RHEL</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-title">Compactar em RAR</div>
+                        <code class="command-code">rar a arquivo.rar pasta/</code>
+                        <div class="command-desc">Cria arquivo RAR</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-title">Descompactar RAR</div>
+                        <code class="command-code">unrar x arquivo.rar</code>
+                        <div class="command-desc">Extrai arquivo RAR</div>
+                    </div>
+                </div>
+
+                <div class="command-section">
+                    <h3>Compilação TFS</h3>
+                    <div class="command-card">
+                        <div class="command-title">Instalar dependências (Ubuntu/Debian)</div>
+                        <code class="command-code">sudo apt-get install build-essential cmake libboost-system-dev libboost-filesystem-dev libboost-thread-dev libluajit-5.1-dev libmysqlclient-dev libssl-dev libcrypto++-dev libpugixml-dev liblua5.1-0-dev zlib1g-dev git</code>
+                        <div class="command-desc">Instala todas as dependências necessárias para compilar TFS</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-title">Clonar e compilar TFS</div>
+                        <code class="command-code">git clone https://github.com/otland/forgottenserver.git<br>cd forgottenserver<br>mkdir build && cd build<br>cmake ..<br>make -j$(nproc)</code>
+                        <div class="command-desc">Clona o repositório e compila o TFS</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-title">Compilar com mais threads</div>
+                        <code class="command-code">make -j4</code>
+                        <div class="command-desc">Compila usando 4 threads (ajuste conforme seu processador)</div>
+                    </div>
+                    <div class="command-card">
+                        <div class="command-title">Limpar build anterior</div>
+                        <code class="command-code">cd build && rm -rf * && cmake .. && make -j$(nproc)</code>
+                        <div class="command-desc">Limpa e recompila do zero</div>
                     </div>
                 </div>
             </div>

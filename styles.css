@@ -210,6 +210,73 @@ body {
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
 
+/* Seções de Comandos */
+.command-section {
+    margin-top: 2.5rem;
+}
+
+.command-section:first-of-type {
+    margin-top: 2rem;
+}
+
+.command-section h3 {
+    color: #667eea;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.command-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.command-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.command-title {
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.command-code {
+    display: block;
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 1rem;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0.75rem 0;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+    border-left: 4px solid #667eea;
+}
+
+.command-code br {
+    display: block;
+    content: "";
+    margin: 0.5rem 0;
+}
+
+.command-desc {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .sidebar {
