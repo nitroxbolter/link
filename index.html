@@ -1,11 +1,98 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>GitHub Pages OK</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links Importantes</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>GitHub Pages funcionando 🚀</h1>
-  <p>Repositório: link</p>
+    <div class="container">
+        <!-- Menu Lateral -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>Links Importantes</h1>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#home" class="nav-item active" data-page="home">
+                    <span class="nav-icon">🏠</span>
+                    <span class="nav-text">Home</span>
+                </a>
+                <a href="#bases" class="nav-item" data-page="bases">
+                    <span class="nav-icon">📚</span>
+                    <span class="nav-text">Bases</span>
+                </a>
+                <a href="#sprites" class="nav-item" data-page="sprites">
+                    <span class="nav-icon">🎨</span>
+                    <span class="nav-text">Sprites</span>
+                </a>
+                <a href="#github" class="nav-item" data-page="github">
+                    <span class="nav-icon">💻</span>
+                    <span class="nav-text">GitHub</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <!-- Página Home -->
+            <div id="home" class="page active">
+                <h2>Bem-vindo!</h2>
+                <p>Este é um site simples para guardar links importantes organizados por categorias.</p>
+                <div class="welcome-section">
+                    <h3>Navegue pelo menu lateral para acessar:</h3>
+                    <ul class="feature-list">
+                        <li><strong>Bases</strong> - Links relacionados a bases de conhecimento</li>
+                        <li><strong>Sprites</strong> - Links de recursos gráficos e sprites</li>
+                        <li><strong>GitHub</strong> - Links importantes do GitHub</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Página Bases -->
+            <div id="bases" class="page">
+                <h2>Bases</h2>
+                <p>Links importantes relacionados a bases de conhecimento:</p>
+                <div class="links-container">
+                    <!-- Adicione seus links aqui -->
+                    <div class="link-card">
+                        <h3>Exemplo de Link</h3>
+                        <p>Descrição do link</p>
+                        <a href="#" target="_blank" class="link-button">Acessar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Página Sprites -->
+            <div id="sprites" class="page">
+                <h2>Sprites</h2>
+                <p>Links importantes relacionados a sprites e recursos gráficos:</p>
+                <div class="links-container">
+                    <!-- Adicione seus links aqui -->
+                    <div class="link-card">
+                        <h3>Exemplo de Link</h3>
+                        <p>Descrição do link</p>
+                        <a href="#" target="_blank" class="link-button">Acessar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Página GitHub -->
+            <div id="github" class="page">
+                <h2>GitHub</h2>
+                <p>Links importantes relacionados ao GitHub:</p>
+                <div class="links-container">
+                    <!-- Adicione seus links aqui -->
+                    <div class="link-card">
+                        <h3>Exemplo de Link</h3>
+                        <p>Descrição do link</p>
+                        <a href="#" target="_blank" class="link-button">Acessar</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
