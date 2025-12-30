@@ -295,11 +295,27 @@
 
                 <div class="command-section">
                     <h3>Compilação TFS</h3>
+                    <h3>Instalar dependências</h3>
+
                     <div class="command-card">
-                        <div class="command-title">Instalar dependências (Ubuntu/Debian)</div>
+                        <div class="command-title">Debian 10 & 11</div>
                         <code
-                            class="command-code">sudo apt-get install build-essential cmake libboost-system-dev libboost-filesystem-dev libboost-thread-dev libluajit-5.1-dev libmysqlclient-dev libssl-dev libcrypto++-dev libpugixml-dev liblua5.1-0-dev zlib1g-dev git</code>
-                        <div class="command-desc">Instala todas as dependências necessárias para compilar TFS</div>
+                            class="command-code">sudo apt-get install git cmake g++ libcrypto++-dev libcrypto++-doc libcrypto++-utils libpugixml-dev libfmt-dev libluajit-5.1-dev libmariadb-dev-compat libboost-date-time-dev libboost-system-dev libboost-iostreams-dev libboost-filesystem-dev</code>
+                        <div class="command-desc">Dependências corretas para Debian 10 e 11</div>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="command-title">Ubuntu 20.04</div>
+                        <code
+                            class="command-code">sudo apt-get install git cmake g++ libcrypto++-dev libcrypto++-doc libcrypto++-utils libpugixml-dev libfmt-dev libluajit-5.1-dev libmysqlclient-dev libboost-date-time-dev libboost-system-dev libboost-iostreams-dev libboost-filesystem-dev liblua5.2-dev libboost-all-dev</code>
+                        <div class="command-desc">Dependências corretas para Ubuntu 20.04</div>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="command-title">Ubuntu 22.04</div>
+                        <code
+                            class="command-code">sudo apt-get install git cmake g++ libcrypto++-dev libcrypto++-doc libcrypto++-utils libpugixml-dev libfmt-dev libmysqlclient-dev liblua5.2-dev libboost-all-dev</code>
+                        <div class="command-desc">Dependências corretas para Ubuntu 22.04</div>
                     </div>
                     <div class="command-card">
                         <div class="command-title">Clonar e compilar TFS</div>

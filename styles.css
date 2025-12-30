@@ -103,6 +103,7 @@ body {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -116,7 +117,7 @@ body {
     font-weight: 700;
 }
 
-.page > p {
+.page>p {
     font-size: 1.1rem;
     color: #666;
     margin-bottom: 2rem;
@@ -253,6 +254,8 @@ body {
     background: #2d2d2d;
     color: #f8f8f2;
     padding: 1rem;
+    padding-right: 4rem;
+    /* Space for copy button */
     border-radius: 8px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.9rem;
@@ -262,6 +265,39 @@ body {
     white-space: pre-wrap;
     word-break: break-all;
     border-left: 4px solid #667eea;
+    position: relative;
+    /* Essential for button positioning */
+}
+
+.copy-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+    opacity: 0;
+    /* Hidden by default */
+}
+
+.command-code:hover .copy-btn {
+    opacity: 1;
+    /* Show on hover */
+}
+
+.copy-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.copy-btn.copied {
+    background: #48bb78;
+    border-color: #48bb78;
 }
 
 .command-code br {
@@ -327,7 +363,7 @@ body {
     z-index: 1000;
     pointer-events: none;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     margin-bottom: 10px;
 }
 
@@ -352,4 +388,3 @@ body {
     visibility: visible;
     transform: translateX(-50%) translateY(-5px);
 }
-
