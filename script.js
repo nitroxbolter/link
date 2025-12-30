@@ -1,5 +1,5 @@
 // Navegação entre páginas
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const navItems = document.querySelectorAll('.nav-item');
     const pages = document.querySelectorAll('.page');
 
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Adiciona event listeners aos itens do menu
     navItems.forEach(item => {
-        item.addEventListener('click', function(e) {
+        item.addEventListener('click', function (e) {
             e.preventDefault();
             const pageId = this.getAttribute('data-page');
             showPage(pageId);
@@ -50,10 +50,38 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Verifica hash inicial
     checkHash();
 
-    // Listener para mudanças no hash
     window.addEventListener('hashchange', checkHash);
+
+    const codeBlocks = document.querySelectorAll('.command-code');
+
+    codeBlocks.forEach(block => {
+        const button = document.createElement('button');
+        button.className = 'copy-btn';
+        button.innerHTML = 'Copiar';
+
+        button.addEventListener('click', async () => {
+            try {
+                const codeText = block.childNodes[0].nodeValue.trim();
+
+                await navigator.clipboard.writeText(codeText);
+
+                const originalText = button.innerHTML;
+                button.innerHTML = 'Copiado!';
+                button.classList.add('copied');
+
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            } catch (err) {
+                console.error('Falha ao copiar:', err);
+                button.innerHTML = 'Erro!';
+            }
+        });
+
+        block.appendChild(button);
+    });
 });
 

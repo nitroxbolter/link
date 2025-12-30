@@ -103,6 +103,7 @@ body {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -116,7 +117,7 @@ body {
     font-weight: 700;
 }
 
-.page > p {
+.page>p {
     font-size: 1.1rem;
     color: #666;
     margin-bottom: 2rem;
@@ -253,6 +254,8 @@ body {
     background: #2d2d2d;
     color: #f8f8f2;
     padding: 1rem;
+    padding-right: 4rem;
+    /* Space for copy button */
     border-radius: 8px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.9rem;
@@ -262,6 +265,39 @@ body {
     white-space: pre-wrap;
     word-break: break-all;
     border-left: 4px solid #667eea;
+    position: relative;
+    /* Essential for button positioning */
+}
+
+.copy-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+    opacity: 0;
+    /* Hidden by default */
+}
+
+.command-code:hover .copy-btn {
+    opacity: 1;
+    /* Show on hover */
+}
+
+.copy-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+.copy-btn.copied {
+    background: #48bb78;
+    border-color: #48bb78;
 }
 
 .command-code br {
@@ -294,8 +330,61 @@ body {
         grid-template-columns: 1fr;
     }
 
+
     .page h2 {
         font-size: 2rem;
     }
 }
 
+/* Tooltip Styles */
+[data-tooltip] {
+    position: relative;
+    cursor: help;
+}
+
+[data-tooltip]:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2d2d2d;
+    color: #fff;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: normal;
+    white-space: normal;
+    width: 300px;
+    line-height: 1.4;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    z-index: 1000;
+    pointer-events: none;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+[data-tooltip]:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: #2d2d2d;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    z-index: 1000;
+    margin-bottom: -2px;
+}
+
+[data-tooltip]:hover:after,
+[data-tooltip]:hover:before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-5px);
+}

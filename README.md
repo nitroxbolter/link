@@ -2,6 +2,14 @@
 
 Site simples para guardar links importantes, hospedado no GitHub Pages.
 
+## 🌐 Acesso Online
+
+O site está online e pode ser acessado diretamente pelo link abaixo:
+
+👉 **[Acessar Hub de Desenvolvimento (Online)](https://nitroxbolter.github.io/link/#home)**
+
+Clique no link acima para visualizar o site completo com todas as informações, ferramentas e recursos atualizados.
+
 ## Estrutura
 
 - **Home**: Página inicial com informações sobre o site
