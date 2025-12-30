@@ -46,9 +46,34 @@
         <!-- Conteúdo Principal -->
         <main class="main-content">
             <!-- Página Home -->
+            <!-- Página Home -->
             <div id="home" class="page active">
-                <h2>Bem-vindo!</h2>
-                <p>Este é um site simples para guardar links importantes organizados por categorias.</p>
+                <div class="hero-section">
+                    <h1 class="hero-title">Hub de Desenvolvimento<br>Open Tibia</h1>
+                    <p class="hero-subtitle">Centralize seus recursos, ferramentas e conhecimentos em um único lugar.
+                        Design moderno para simplificar sua jornada de desenvolvimento.</p>
+                </div>
+
+                <div class="quick-access-grid">
+                    <a href="#bases" class="quick-card" onclick="document.querySelector('[data-page=bases]').click()">
+                        <span class="quick-card-icon">📚</span>
+                        <h3>Bases & Servidores</h3>
+                        <p>Acesse TFS, OTCv8 e outras bases essenciais.</p>
+                    </a>
+
+                    <a href="#tools" class="quick-card" onclick="document.querySelector('[data-page=tools]').click()">
+                        <span class="quick-card-icon">🔧</span>
+                        <h3>Ferramentas</h3>
+                        <p>Editores de mapa, sprites e conversores.</p>
+                    </a>
+
+                    <a href="#comandos" class="quick-card"
+                        onclick="document.querySelector('[data-page=comandos]').click()">
+                        <span class="quick-card-icon">💻</span>
+                        <h3>Comandos Linux</h3>
+                        <p>Guia rápido para compilação e gerenciamento.</p>
+                    </a>
+                </div>
             </div>
 
             <!-- Página Bases -->
